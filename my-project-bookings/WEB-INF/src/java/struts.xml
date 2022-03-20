@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+
+<struts>
+    <!--  Overwrite Convention -->
+    <constant name="struts.convention.action.suffix" value="Controller"/>
+    <constant name="struts.convention.action.mapAllMatches" value="true"/>
+    
+    <constant name="struts.convention.default.parent.package" value="rest-services"/>
+    <constant name="struts.convention.package.locators" value="controller"/> 
+ 
+    
+	<package name="rest-services" extends="rest-default">
+        <global-allowed-methods>index,create,editNew</global-allowed-methods>  
+    </package> 
+    
+</struts>
+
+ 
